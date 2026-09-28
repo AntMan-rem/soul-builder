@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souls Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Souls Builder</h1>
+        <p>Build. Calculate. Test.</p>
+    </header>
+
+    <main>
+
+        <section class="panel">
+            <h2>Game</h2>
+
+            <label for="game">Select Game</label>
+            <select id="game">
+                <option value="elden-ring">Elden Ring</option>
+                <option value="dark-souls-3">Dark Souls III</option>
+                <option value="dark-souls-2">Dark Souls II</option>
+                <option value="dark-souls">Dark Souls</option>
+            </select>
+        </section>
+
+
+        <section class="panel">
+            <h2>Character</h2>
+
+            <label for="characterName">Character Name</label>
+            <input
+                type="text"
+                id="characterName"
+                placeholder="Enter character name"
+            >
+
+            <label for="level">Character Level</label>
+            <input
+                type="number"
+                id="level"
+                value="1"
+                min="1"
+                max="713"
+            >
+        </section>
+
+
+        <section class="panel">
+            <h2>Attributes</h2>
+
+            <p>
+                Points Remaining:
+                <strong id="pointsRemaining">0</strong>
+            </p>
+
+            <div id="attributes"></div>
+        </section>
+
+
+        <section class="panel">
+            <h2>Equipment</h2>
+
+            <label for="weapon">Weapon</label>
+            <select id="weapon"></select>
+
+            <p id="weaponInfo"></p>
+
+            <label for="armor">Armor</label>
+            <select id="armor"></select>
+
+            <p id="armorInfo"></p>
+
+            <label for="spell">Spell</label>
+            <select id="spell"></select>
+
+            <p id="spellInfo"></p>
+        </section>
+
+
+        <section class="panel">
+            <h2>Character Statistics</h2>
+
+            <div class="stat-grid">
+                <div>
+                    <span>Health</span>
+                    <strong id="health">0</strong>
+                </div>
+
+                <div>
+                    <span>Stamina</span>
+                    <strong id="stamina">0</strong>
+                </div>
+
+                <div>
+                    <span>Attack Power</span>
+                    <strong id="attackPower">0</strong>
+                </div>
+
+                <div>
+                    <span>Defense</span>
+                    <strong id="defense">0</strong>
+                </div>
+
+                <div>
+                    <span>Magic Power</span>
+                    <strong id="magicPower">0</strong>
+                </div>
+
+                <div>
+                    <span>Weight</span>
+                    <strong id="weight">0</strong>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="panel">
+            <h2>Damage Calculator</h2>
+
+            <label for="dummy">Training Dummy</label>
+
+            <select id="dummy">
+                <option value="normal">Normal</option>
+                <option value="fire">Fire Resistant</option>
+                <option value="ice">Ice Resistant</option>
+                <option value="magic">Magic Resistant</option>
+                <option value="holy">Holy Resistant</option>
+            </select>
+
+            <button id="calculateDamage">
+                Calculate Damage
+            </button>
+
+            <div class="damage-result">
+                <span>Estimated Damage</span>
+                <strong id="damage">0</strong>
+            </div>
+        </section>
+
+
+        <section class="panel build-summary">
+            <h2>Build Summary</h2>
+
+            <div id="summary">
+                Create your character to see your build.
+            </div>
+        </section>
+
+
+        <section class="buttons">
+            <button id="saveBuild">Save Build</button>
+            <button id="resetBuild" class="danger">Reset</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Souls Builder — Independent Study: Computer Science</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
